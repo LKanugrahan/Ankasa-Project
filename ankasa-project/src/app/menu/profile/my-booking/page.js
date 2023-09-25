@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import * as Icon from "react-feather";
 
@@ -20,6 +21,7 @@ const ProfileDetail = () => {
         <h3>Booking</h3>
         <p className="m-0">Order History</p>
       </div>
+      <Link href="/menu/booking-pass" style={{textDecoration:"none", color:"black"}}>
       <div style={profile} className="container-fluid my-3 m-0 p-4 bg-white">
         <p>Monday, 20 July 2023 - 12:33</p>
         <div className="d-flex gap-4">
@@ -46,6 +48,8 @@ const ProfileDetail = () => {
           </div>
         </div>
       </div>
+      </Link>
+
     </div>
   );
 };

@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import React from "react";
 import * as Icon from "react-feather";
@@ -53,35 +54,42 @@ const Profile = ({ children }) => {
             </div>
           </div>
           <div className="d-flex flex-column gap-4">
-            <Link href={"/menu/profile/my-profile"}>
+            <Link href={"/menu/profile/my-profile"} className="text-decoration-none text-dark">
               <div className="d-flex flex-row align-items-center justify-content-between">
-                <div>
+                <div className="d-flex">
                   <Icon.User fill="black" color="black" className="mx-3" />
-                  Profile
+                  <p className="m-0">Profile</p>
                 </div>
                 <Icon.ChevronRight />
               </div>
             </Link>
-
-            <div className="d-flex flex-row align-items-center justify-content-between">
-              <div>
-                <Icon.Star fill="black" color="black" className="mx-3" /> My
-                Reviews
+            <Link href={"#"} className="text-decoration-none text-dark">
+              <div className="d-flex flex-row align-items-center justify-content-between">
+                <div className="d-flex">
+                  <Icon.Star color="black" className="mx-3" />
+                  <p className="m-0">My Reviews</p>
+                </div>
+                <Icon.ChevronRight />
               </div>
-              <Icon.ChevronRight />
-            </div>
-            <div className="d-flex flex-row align-items-center justify-content-between">
-              <div>
-                <Icon.Settings className="mx-3" /> Settings
+            </Link>
+            <Link href={"#"} className="text-decoration-none text-dark">
+              <div className="d-flex flex-row align-items-center justify-content-between">
+                <div className="d-flex">
+                  <Icon.Settings color="black" className="mx-3" />
+                  <p className="m-0">Settings</p>
+                </div>
+                <Icon.ChevronRight />
               </div>
-              <Icon.ChevronRight />
-            </div>
-            <div className="d-flex flex-row align-items-center justify-content-between">
-              <div>
-                <Icon.LogOut className="mx-3" /> Logout
+            </Link>
+            <Link onClick={() => localStorage.clear()} href={"/menu/landing-page"} className="text-decoration-none text-danger">
+              <div className="d-flex flex-row align-items-center justify-content-between">
+                <div className="d-flex">
+                  <Icon.LogOut color="red" className="mx-3" />
+                  <p className="m-0">Logout</p>
+                </div>
+                <Icon.ChevronRight />
               </div>
-              <Icon.ChevronRight />
-            </div>
+            </Link>
           </div>
         </div>
       </div>

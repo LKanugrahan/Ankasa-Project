@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  // let responseData;
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
@@ -18,7 +17,7 @@ const Register = () => {
 
     try {
       const response = await fetch(
-        "https://easy-lime-seal-toga.cyclic.app/users/register",
+        "https://easy-lime-seal-toga.cyclic.app/auth/register",
         {
           method: "POST",
           headers: {
@@ -28,16 +27,17 @@ const Register = () => {
         }
       );
       const data = await response.json();
-      // responseData = data;
       if (response.ok) {
         toast.success(data.message, {
           position: "top-right",
           autoClose: 3000,
         });
         router.push("./login");
+      } else if (data.message.split("-")[1]){
+        console.log(data.message);
+        toast.error(data.message.split("-")[1]);
       } else {
-        console.log(responseData.message);
-        console.log(responseData.message.split("-")[1]);
+        console.log(data.message);
         toast.error(data.message.split(".")[0]);
       }
       return data;

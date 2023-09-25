@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-
 const Login = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -15,7 +14,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        "https://easy-lime-seal-toga.cyclic.app/users/login",
+        "https://easy-lime-seal-toga.cyclic.app/auth/login",
         {
           method: "POST",
           headers: {
@@ -30,10 +29,10 @@ const Login = () => {
           position: "top-right",
           autoClose: 3000,
         });
+        localStorage.setItem("token", data.data.access_token);
         router.push("/menu/profile/my-profile");
       } else {
-        console.log(data.message.split("-")[1]);
-        toast.error(data.message.split(".")[0]);
+        toast.error(data.message);
       }
     } catch (error) {
       toast.error("Terjadi kesalahan:", error);
@@ -72,12 +71,11 @@ const Login = () => {
         <button className="btn btn-primary col-12 my-4" type="submit">
           Sign In
         </button>
-        
-      </form><div className="d-flex flex-column align-items-center">
-      <p className="m-0">Did you forgot your password?</p>
-      <Link href={'forgotpass'}>Tap here for reset</Link>
+      </form>
+      <div className="d-flex flex-column align-items-center">
+        <p className="m-0">Did you forgot your password?</p>
+        <Link href={"forgotpass"}>Tap here for reset</Link>
       </div>
-
     </div>
   );
 };
