@@ -118,6 +118,7 @@ const page = () => {
   return (
     <div style={heightSkeleton}>
       <div className="p-0 align-items-center d-flex bg-primary" style={search}>
+        
       </div>
       <div className="d-flex">
         <div className="col-2 m-4">

@@ -54,14 +54,14 @@ const ProfileDetail = () => {
               placeholder="Fullname"
             />
           </div>
-          <label htmlFor="dropdown-basic-button" className="form-label">
+          {/* <label htmlFor="dropdown-basic-button" className="form-label">
             City
           </label>
           <DropdownButton id="dropdown-basic-button" title="City">
-              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-          </DropdownButton>
+              <Dropdown.Item href="#/action-1">Bekasi</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Jakarta</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Bandung</Dropdown.Item>
+          </DropdownButton> */}
           <div className="mb-3">
             <label htmlFor="address" className="form-label">
               Address

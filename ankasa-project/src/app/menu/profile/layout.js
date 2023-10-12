@@ -1,12 +1,12 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React from "react";
 import * as Icon from "react-feather";
 
 const Profile = ({ children }) => {
   const bg = {
-    backgroundColor:'rgba(245, 246, 250, 1)'
-  }
+    backgroundColor: "rgba(245, 246, 250, 1)",
+  };
   const avatar = {
     height: "137px",
     width: "137px",
@@ -30,11 +30,15 @@ const Profile = ({ children }) => {
         style={profileDashboard}
         className="container-fluid m-5 p-4 bg-white d-flex flex-column align-items-center"
       >
-        <div style={avatar} className="rounded-circle bg-primary"></div>
+        <img
+          style={avatar}
+          className="rounded-circle"
+          src="https://res.cloudinary.com/dafjb9vn7/image/upload/v1693639658/profile_cmqdrx.png"
+        />
         <button type="button" className="btn btn-outline-primary m-3">
           Select Photo
         </button>
-        <h4>Mike Kowalski</h4>
+        <h4>{localStorage.getItem("name")}</h4>
         <p>
           <Icon.MapPin color="blue" /> Medan, Indonesia
         </p>
@@ -54,7 +58,10 @@ const Profile = ({ children }) => {
             </div>
           </div>
           <div className="d-flex flex-column gap-4">
-            <Link href={"/menu/profile/my-profile"} className="text-decoration-none text-dark">
+            <Link
+              href={"/menu/profile/my-profile"}
+              className="text-decoration-none text-dark"
+            >
               <div className="d-flex flex-row align-items-center justify-content-between">
                 <div className="d-flex">
                   <Icon.User fill="black" color="black" className="mx-3" />
@@ -81,7 +88,11 @@ const Profile = ({ children }) => {
                 <Icon.ChevronRight />
               </div>
             </Link>
-            <Link onClick={() => localStorage.clear()} href={"/menu/landing-page"} className="text-decoration-none text-danger">
+            <Link
+              onClick={() => localStorage.clear()}
+              href={"/menu/landing-page"}
+              className="text-decoration-none text-danger"
+            >
               <div className="d-flex flex-row align-items-center justify-content-between">
                 <div className="d-flex">
                   <Icon.LogOut color="red" className="mx-3" />

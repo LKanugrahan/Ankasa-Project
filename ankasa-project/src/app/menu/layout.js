@@ -8,6 +8,7 @@ import * as Icon from "react-feather";
 import DatePicker from "react-datepicker";
 
 const layout = ({ children }) => {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [startdate, setStartDate] = useState(new Date());
   const navHeight = {
     // height: "158px",
@@ -58,9 +59,15 @@ const layout = ({ children }) => {
               <Dropdown
                 className="nav-link"
                 autoClose={false}
+                show={isDropdownOpen}
                 style={{ cursor: "pointer" }}
               >
-                <Dropdown.Toggle bsPrefix="p-0" as={"Text"} id="dropdown-basic">
+                <Dropdown.Toggle
+                  bsPrefix="p-0"
+                  as={"Text"}
+                  id="dropdown-basic"
+                  onClick={() => setDropdownOpen(true)}
+                >
                   Find Ticket
                 </Dropdown.Toggle>
                 <Dropdown.Menu style={{ width: "300px" }} className="my-4 p-3">
@@ -131,9 +138,13 @@ const layout = ({ children }) => {
                       onChange={(date) => setStartDate(date)}
                     />
                     <Link href="/menu/find-ticket">
-                    <button className="btn btn-primary col-12 my-4" type="submit">
-          Find Ticket
-        </button>
+                      <button
+                        className="btn btn-primary col-12 my-4"
+                        type="submit"
+                        onClick={() => setDropdownOpen(false)}
+                      >
+                        Find Ticket
+                      </button>
                     </Link>
                   </form>
                 </Dropdown.Menu>
@@ -147,20 +158,20 @@ const layout = ({ children }) => {
           </ul>
         </div>
         <div className="d-flex flex-row align-items-center gap-5">
-          {localStorage.getItem("token") ? (
-            <>
-              <Icon.Mail />
-              <Icon.Bell />
-              <Link href="/menu/profile/my-profile">
-              <div style={avatar} className="rounded-circle bg-primary"></div>
-              </Link>
-            </>
-          ) : (
+          {localStorage.getItem("token") === null ?(
             <Link href={"/auth/register"}>
               <button type="button" className="btn btn-primary">
                 Sign Up
               </button>
             </Link>
+          ): (
+            <>
+              <Icon.Mail />
+              <Icon.Bell />
+              <Link href="/menu/profile/my-profile">
+                  <img style={avatar} className="rounded-circle" src="https://res.cloudinary.com/dafjb9vn7/image/upload/v1693639658/profile_cmqdrx.png" />
+              </Link>
+            </>
           )}
         </div>
       </nav>

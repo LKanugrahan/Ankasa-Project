@@ -30,6 +30,8 @@ const Login = () => {
           autoClose: 3000,
         });
         localStorage.setItem("token", data.data.access_token);
+        localStorage.setItem("name", data.data.name);
+        console.log(data);
         router.push("/menu/profile/my-profile");
       } else {
         toast.error(data.message);
