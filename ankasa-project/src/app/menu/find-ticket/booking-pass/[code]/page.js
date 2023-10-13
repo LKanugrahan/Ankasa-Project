@@ -4,20 +4,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import * as Icon from "react-feather";
 
-const page = ({ params }) => {
+const Booking = ({ params }) => {
   const [ticket, setTicket] = useState();
-
-  useEffect(() => {
-    ticketData()
-      .then((data) => {
-        console.log("Data fetched:", data);
-        setTicket(data.data.result);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
-
   const ticketData = async () => {
     try {
       const response = await fetch(
@@ -41,6 +29,17 @@ const page = ({ params }) => {
       console.error("Error fetching data:", error);
     }
   };
+
+  useEffect(() => {
+    ticketData()
+      .then((data) => {
+        console.log("Data fetched:", data);
+        setTicket(data.data.result);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   const staticHeight = { height: "650px" };
   const container = { height: "550px", width: "800px" };
@@ -111,4 +110,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Booking;

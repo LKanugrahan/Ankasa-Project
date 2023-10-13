@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import { Dropdown, DropdownButton, Form, InputGroup } from "react-bootstrap";
 import * as Icon from "react-feather";
 
-const page = ({ params }) => {
+const ResultTicket = ({ params }) => {
   const router = useRouter()
   const [ticket, setTicket] = useState([]);
   const [passenger, setPassenger] = useState({
@@ -295,4 +295,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default ResultTicket;

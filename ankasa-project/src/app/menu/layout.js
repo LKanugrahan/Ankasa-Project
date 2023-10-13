@@ -7,7 +7,7 @@ import { Dropdown } from "react-bootstrap";
 import * as Icon from "react-feather";
 import DatePicker from "react-datepicker";
 
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [startdate, setStartDate] = useState(new Date());
   const navHeight = {
@@ -243,4 +243,4 @@ const layout = ({ children }) => {
   );
 };
 
-export default layout;
+export default Layout;

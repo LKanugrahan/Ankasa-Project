@@ -32,7 +32,7 @@ const airlines = [
 ];
 
 // const listPlane = [ {id:}]
-const page = () => {
+const FindTicket = () => {
   const [facilities, setFacilities] = useState([]);
   const [ticket, setTicket] = useState([]);
 
@@ -351,4 +351,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default FindTicket;

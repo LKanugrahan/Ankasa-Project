@@ -7,7 +7,7 @@ import * as Icon from "react-feather";
 
 
 
-const page = ({ params }) => {
+const Payment = ({ params }) => {
   const router = useRouter()
   console.log(params.code);
   const [user, setUser] = useState();
@@ -157,4 +157,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Payment;
