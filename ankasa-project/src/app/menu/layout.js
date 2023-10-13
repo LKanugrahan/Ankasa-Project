@@ -2,12 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import * as Icon from "react-feather";
 import DatePicker from "react-datepicker";
 
 const Layout = ({ children }) => {
+  let token
+  useEffect(() => {
+    token = localStorage.getItem("token")
+  }, [])
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [startdate, setStartDate] = useState(new Date());
   const navHeight = {
@@ -158,7 +163,7 @@ const Layout = ({ children }) => {
           </ul>
         </div>
         <div className="d-flex flex-row align-items-center gap-5">
-          {localStorage.getItem("token") === null ?(
+          {!token ?(
             <Link href={"/auth/register"}>
               <button type="button" className="btn btn-primary">
                 Sign Up

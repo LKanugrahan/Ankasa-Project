@@ -1,9 +1,13 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import * as Icon from "react-feather";
 
 const Profile = ({ children }) => {
+  let name
+  useEffect(() => {
+    name = localStorage.getItem('name')
+  }, [])
   const bg = {
     backgroundColor: "rgba(245, 246, 250, 1)",
   };
@@ -38,7 +42,7 @@ const Profile = ({ children }) => {
         <button type="button" className="btn btn-outline-primary m-3">
           Select Photo
         </button>
-        <h4>{localStorage.getItem("name")}</h4>
+        <h4>{name}</h4>
         <p>
           <Icon.MapPin color="blue" /> Medan, Indonesia
         </p>
