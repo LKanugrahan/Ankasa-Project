@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import * as Icon from "react-feather";
 
 const Profile = ({ children }) => {
-  let name
+  const [name, setName] = useState('')
   useEffect(() => {
-    name = localStorage.getItem('name')
+    const storedName = localStorage.getItem('name')
+    setName(storedName)
   }, [])
   const bg = {
     backgroundColor: "rgba(245, 246, 250, 1)",

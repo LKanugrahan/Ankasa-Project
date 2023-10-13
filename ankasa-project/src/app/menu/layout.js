@@ -8,9 +8,10 @@ import * as Icon from "react-feather";
 import DatePicker from "react-datepicker";
 
 const Layout = ({ children }) => {
-  let token
+  const [token, setToken] = useState()
   useEffect(() => {
-    token = localStorage.getItem("token")
+    const storedToken = localStorage.getItem("token")
+    setToken(storedToken)
   }, [])
 
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -163,7 +164,7 @@ const Layout = ({ children }) => {
           </ul>
         </div>
         <div className="d-flex flex-row align-items-center gap-5">
-          {!token ?(
+          {token && !token ?(
             <Link href={"/auth/register"}>
               <button type="button" className="btn btn-primary">
                 Sign Up
