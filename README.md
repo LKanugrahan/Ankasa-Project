@@ -1,23 +1,22 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/LKanugrahan/mamaRecipeAPI">
-    <img src="https://i.postimg.cc/JnsbMGwj/mamarecipe-logo.png" alt="Logo" width="150" height="180">
+  <a href="https://github.com/LKanugrahan/Ankasa-Project">
+    <img src="https://res.cloudinary.com/dafjb9vn7/image/upload/v1697245168/illustration_svsh6f.png" alt="Logo">
   </a>
 
-  <h3 align="center">Mama Recipe API</h3>
+  <h3 align="center">Ankasa Web</h3>
 
   <p align="center">
-    Discover Recipe & Delicious Food.
     <br/>
     <br/>
-    <a href="https://github.com/LKanugrahan/mamaRecipeAPI"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/LKanugrahan/Ankasa-Project"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/LKanugrahan/mamaRecipeAPI">View Demo</a>
+    <a href="https://github.com/LKanugrahan/Ankasa-Project">View Demo</a>
     .
-    <a href="https://github.com/LKanugrahan/mamaRecipeAPI/issues">Report Bug</a>
+    <a href="https://github.com/LKanugrahan/Ankasa-Project/issues">Report Bug</a>
     .
-    <a href="https://github.com/LKanugrahan/mamaRecipeAPI/issues">Request Feature</a>
+    <a href="https://github.com/LKanugrahan/Ankasa-Project/issues">Request Feature</a>
   </p>
 </p>
 
@@ -27,42 +26,40 @@
 * [Built With](#built-with)
 * [Installation](#installation)
 * [Contributing](#contributing)
-* [Related Project](#related-project)
 * [Contact](#contact)
 
 ## About The Project
 
 <p align="justify">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Mama Recipe API project is a web-based application aimed at providing cooking recipes accessible to users through an API interface. This application leverages Node.js, Express.js, and the Relational Database Management System (RDBMS) PostgreSQL to manage cooking recipe data. This project is suitable for those seeking culinary inspiration, wishing to share recipes, or simply looking for cooking guidance.</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ankasa Web project is a front-end web application designed to provide a seamless and user-friendly platform for booking and exploring a diverse range of flight tickets. This project makes use of cutting-edge technologies including Node.js, Next.js, Bootstrap, React-Bootstrap and CSS. Whether you're an avid traveler searching for flight options, planning your next vacation, or just in need of booking assistance, this platform has got you covered.</p>
 
 ## Built With
 
-This API was built with some technologies below:
+This Web was built with some technologies below:
 
 **Technology:**
 - Node.js
-- Express.js
+- Next.js
 
-**RDBMS:**
-- PostgreSQL
-
-**Testing API:**
-- Postman
+**Styling:**
+- Bootstrap
+- React-Bootstrap
+- CSS
 
 ## Installation
 
-Install Mama Recipe Mobile API with npm :
+Install Ankasa Web with npm :
 
 - Clone the Repo
 
 ```
-  git clone https://github.com/LKanugrahan/mamaRecipeAPI.git
+  git clone https://github.com/LKanugrahan/Ankasa-Project.git
 ```
 
 - Go To Folder Repo
 
 ```
-  cd mamaRecipeAPI
+  cd Ankasa-Project
 ```
 
 - Install Module
@@ -71,25 +68,12 @@ Install Mama Recipe Mobile API with npm :
   npm install
 ```
 
-- Setup .env
+- Run Program
+
+  Type in repository path
 ```
-For Database
-DB_HOST =
-DB_USER =
-DB_PASSWORD =
-DB_NAME =
-DB_PORT =
-
-For JSON Web Token
-JWT_TOKEN =
-
-For cloudinary
-CLOUD_NAME =
-API_KEY =
-API_SECRET =
+npm run dev
 ```
-
-- Type  ```npm run start``` To Start Production
 
 ## Contributing
 
@@ -100,10 +84,6 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-    
-## Related Project
-
-:rocket: [`Backend Mama Recipe`](https://github.com/LKanugrahan/mamaRecipeAPI)
 
 ## Contact
 
