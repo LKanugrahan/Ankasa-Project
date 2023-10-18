@@ -93,7 +93,7 @@ const Profile = ({ children }) => {
                 <Icon.ChevronRight />
               </div>
             </Link>
-            <Link
+            <a
               onClick={() => localStorage.clear()}
               href={"/menu/landing-page"}
               className="text-decoration-none text-danger"
@@ -105,7 +105,7 @@ const Profile = ({ children }) => {
                 </div>
                 <Icon.ChevronRight />
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

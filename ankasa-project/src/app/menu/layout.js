@@ -14,6 +14,8 @@ const Layout = ({ children }) => {
     setToken(storedToken)
   }, [])
 
+  console.log(token)
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [startdate, setStartDate] = useState(new Date());
   const navHeight = {
@@ -164,7 +166,7 @@ const Layout = ({ children }) => {
           </ul>
         </div>
         <div className="d-flex flex-row align-items-center gap-5">
-          {token && !token ?(
+          {!token ?(
             <Link href={"/auth/register"}>
               <button type="button" className="btn btn-primary">
                 Sign Up
